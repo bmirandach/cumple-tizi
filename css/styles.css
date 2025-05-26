@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+@font-face {
+  font-family: "handwriting";
+  src: url("/assets/fonts/Handwriting.woff2") format("woff");
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e3e3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  font-size: 42px;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+
+span {
+  transform: skew(-10deg);
+  display: block;
+  float: left;
+  text-shadow: #654747 1px 1px, #654747 2px 2px, #654747 3px 3px, #654747 4px 4px, #654747 5px 5px, #654747 5px 5px;
+  min-width: 10px;
+  min-height: 10px;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-cake {
+  background-image: url("/assets/images/cake.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 50%;
+}
+
+.bg-color {
+  background-color: #fffafa; /*  blanchedalmond; */
+}
+
+.bg-color p {
+  font-family: handwriting;
+  font-size: xx-large;
+}
+
+.button {
+  font-family: "Fjalla One", sans-serif;
+  background-color: transparent;
+  border-color: transparent;
+  padding: .5rem;
+  font-size: 42px;
+  color: #a38ce7;
+  text-shadow: #79cda7 1px 1px, #79cda7 2px 2px, #79cda7 3px 3px, #faa1a1 4px 4px, #faa1a1 5px 5px, #faa1a1 5px 5px;
+}
+
+.animated-title {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  transform: translateX(8px) translateY(40px)rotate(-10deg);
+}
+
+.animated-title .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.animated-title .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.letter:nth-child(n) {
+  color: #a38ce7;
+}
+
+.letter:nth-child(2n) {
+  color: #79cda7;
+} 
+
+.letter:nth-child(4n) {
+  color: #f0d794;
+}
+
+.letter:nth-child(3n) {
+  color: #faa1a1;
+}
+
+.letter:nth-child(5n) {
+  color: #95b6d7;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 9px;
+  min-height: 45vh;
+  width: 80vw;
+  opacity: 0;
+  /* overflow: hidden; */
+  pointer-events: none;
+  position: absolute;
+  /* transform: translate(-50%, -50%) scale(0.5); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.card-note {
+  padding: 2rem;
+}
+
+.active {
+  pointer-events: all;
+  z-index: 1;
+  animation: fadeIn .6s ease-in-out forwards;
+}
+
+.inactive {
+  z-index: 2;
+  animation: fadeOut .5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
