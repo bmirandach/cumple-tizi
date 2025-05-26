@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "handwriting";
-  src: url("/assets/fonts/Handwriting.woff2") format("woff");
+  src: url("../assets/fonts/Handwriting.woff2") format("woff");
 }
 
 *,
@@ -52,7 +52,7 @@ span {
 }
 
 .bg-cake {
-  background-image: url("/assets/images/cake.png");
+  background-image: url("../assets/images/cake.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
