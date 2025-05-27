@@ -3,10 +3,10 @@ const $cards = document.querySelectorAll(".card")
 const totalCards = document.querySelectorAll(".card").length
 
 let activeCard = 1
-let isAnimatingCardTransition = false;
+let isAnimatingCardTransition = false
 
-// Variable para controlar si el título de la primera card ya fue animado
-let hasFirstTitleBeenAnimated = false;
+//el título de la primera card solo se anima la primera vez
+let hasFirstTitleBeenAnimated = false
 
 $buttons.forEach(button => {
   button.addEventListener("click", () => {
@@ -27,7 +27,7 @@ function getCard(n) {
 }
 
 function letterizeTitle(title) {
-  //guardo el contenido y vacío el titulo
+  //guardo el contenido y vacío el título
   const text = title.textContent
   title.innerHTML = ""
 
@@ -74,15 +74,14 @@ function animateTitle(titleElement) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Busca la primera card (asumiendo que tiene el índice 0)
   const firstCard = $cards[0]
   const firstTitle = firstCard ? firstCard.querySelector('.animated-title') : null
 
   if (firstTitle && !hasFirstTitleBeenAnimated) {
-    letterizeTitle(firstTitle) // Divide el texto en letras
+    letterizeTitle(firstTitle)
     setTimeout(() => {
-      animateTitle(firstTitle)   // Anima esas letras
-      hasFirstTitleBeenAnimated = true // Marca que ya se animó
+      animateTitle(firstTitle)
+      hasFirstTitleBeenAnimated = true
     }, 800)
     
   }

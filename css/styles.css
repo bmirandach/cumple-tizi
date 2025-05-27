@@ -36,7 +36,7 @@ span {
   transform: skew(-10deg);
   display: block;
   float: left;
-  text-shadow: #654747 1px 1px, #654747 2px 2px, #654747 3px 3px, #654747 4px 4px, #654747 5px 5px, #654747 5px 5px;
+  text-shadow: #654747 1px 1px, #654747 2px 2px, #654747 3px 3px, #654747 4px 4px, #654747 5px 5px;
   min-width: 10px;
   min-height: 10px;
   position: relative;
@@ -60,7 +60,7 @@ span {
 }
 
 .bg-color {
-  background-color: #fffafa; /*  blanchedalmond; */
+  background-color: #fffafa;
 }
 
 .bg-color p {
@@ -72,10 +72,10 @@ span {
   font-family: "Fjalla One", sans-serif;
   background-color: transparent;
   border-color: transparent;
-  padding: .5rem;
-  font-size: 42px;
+  /* padding: .5rem; */
+  font-size: 20px;
   color: #a38ce7;
-  text-shadow: #79cda7 1px 1px, #79cda7 2px 2px, #79cda7 3px 3px, #faa1a1 4px 4px, #faa1a1 5px 5px, #faa1a1 5px 5px;
+  text-shadow: #79cda7 1px 1px, #f0d794 2px 2px, #faa1a1 3px 3px, #95b6d7 4px 4px;
 }
 
 .animated-title {
@@ -116,17 +116,22 @@ span {
   color: #95b6d7;
 }
 
+.image {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  border-radius: 9px;
-  min-height: 45vh;
-  width: 80vw;
+  /* border-radius: 9px; */
+  height: 26rem;
+  width: 90vw;
   opacity: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   pointer-events: none;
   position: absolute;
   /* transform: translate(-50%, -50%) scale(0.5); */
@@ -137,7 +142,7 @@ span {
 }
 
 .card-note {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .active {
