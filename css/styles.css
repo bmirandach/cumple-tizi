@@ -130,6 +130,7 @@ span {
   /* border-radius: 9px; */
   height: 26rem;
   width: 90vw;
+  max-width: 400px;
   opacity: 0;
   overflow: hidden;
   pointer-events: none;
@@ -154,6 +155,10 @@ span {
 .inactive {
   z-index: 2;
   animation: fadeOut .5s ease-in-out forwards;
+}
+
+.scroll {
+  overflow-y: auto;
 }
 
 @keyframes fadeIn {
